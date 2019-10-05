@@ -1,0 +1,266 @@
+//SCSS
+
+@import url('https://fonts.googleapis.com/css?family=Cuprum|Lobster|Merienda|Monoton|Neuton|Permanent+Marker&display=swap');
+// @import "mixins";
+
+
+//MIXINS
+@mixin coverImg() {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin transition() {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+@mixin UnTransition() {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    -ms-transition: none;
+    transition: none;
+}
+
+@mixin middleTextPos() {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+//MIXINS END
+
+
+//HEADER
+header {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    //NAVIGATION
+    nav {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-bottom: 3px solid rgba(130, 90, 44, 0.3);
+        font-size: 20px;
+
+        .navbar-brand {
+            img {
+                width: 40%;
+            }
+        }
+
+        .navbar-toggler {
+            border: 1px solid rgb(130, 90, 44);
+
+            &:focus {
+                outline: none;
+            }
+
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(130,90,44, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+
+            }
+
+        }
+
+        .collapse {
+            width: 100%;
+
+            ul {
+                li:not(:last-child) {
+                    margin-right: 120px;
+
+                }
+
+                li {
+                    
+
+                    a {
+                        font-size: 1.3em;
+                        color: rgb(42, 28, 14);
+                        text-shadow: 2px 2px 3px white;
+                        font-style: italic;
+                        font-weight: 550;
+                        letter-spacing: 1px;
+                        @include transition();
+
+                        &:hover {
+                            @include transition();
+                            color: rgb(249, 244, 238);
+                            text-shadow: 2px 2px 3px rgb(42, 28, 14);
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    //NAVIGATION EnD
+
+//GALLERY
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 200px;
+    padding-bottom: 100px;
+
+    background-color: #fef8ef;
+    .col-xl-2 {
+        margin: 0;
+        padding: 0;
+
+        a {
+            width: 100%;
+                margin: 0;
+                padding: 0;
+            img {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+
+}
+//GALLERY END
+
+    //HEADER END
+}
+
+//FOOTER
+
+//SECTION - footer
+.footer {
+    height: 100%;
+    background-image: url("../img/desktop-3147855_1920.jpg");
+    @include coverImg();
+    border-top: 1px solid rgba(#000, 0.7);
+    border-bottom: 1px solid rgba(#000, 0.7);
+    box-shadow:
+        inset 0px 11px 8px -10px #000,
+        inset 0px -11px 8px -10px #000;
+
+
+    #social {
+        padding-top: 30px;
+        padding-bottom: 50px;
+
+        a {
+            img {
+                width: 55px;
+                padding-left: 7px;
+            }
+        }
+    }
+}
+
+//SECTION  - banner
+.banner {
+    p {
+        margin: 0 auto;
+        letter-spacing: 2px;
+
+
+    }
+}
+
+
+
+//MEDIA QUERIES
+
+@media screen and (max-width: 767px) {
+
+
+    //HEADER
+    header {
+        .logo1 {
+            width: 100%;
+
+
+            img {
+                width: 65%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1199px) {
+    header {
+
+        //NAVIGATION
+        nav {
+
+            .collapse {
+
+
+                // Z A S T O     N E C E   O D M A H    D A  S E   P R O M E N I  B O J A     S L O V A   K A D   S E   K L I K N E
+                ul {
+                    li {
+
+                        a {
+                            font-size: 1.3em;
+                            color: green;
+                            text-shadow: 2px 2px 3px white;
+                            font-style: italic;
+                            font-weight: 550;
+                            @include UnTransition();
+
+                            &:hover {
+                                @include UnTransition();
+
+                                color: rgb(42, 28, 14);
+                                text-shadow: 2px 2px 3px white;
+
+                                li:not(:last-child) {
+                                    margin-right: 0px;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    //NAVIGATION EnD
+
+
+}
+
+
+@media screen and (max-width: 1450px) {
+    header {
+        nav {
+            .collapse {
+                ul {
+                    li:not(:last-child) {
+                        margin-right: 50px;
+                    }
+
+                    li {
+                        a {
+                            letter-spacing: 0px;
+                            font-size: 1.3em;
+
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
