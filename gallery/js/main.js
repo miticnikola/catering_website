@@ -3,14 +3,14 @@ $(window).scroll(function() {
 
     if ($(window).scrollTop() >= 120) {
         $('.navbar').css({
-            'background': 'beige',
+            'background-color': 'beige',
             '-webkit-transiton': 'all .5s',
             '-moz-transiton': 'all .5s',
             'transition': 'all .5s'
         });
     } else {
         $('.navbar').css({
-            'background': 'transparent',
+            'background-color': 'rgba(245,245,220,0.6)'
         });
     }
 });
@@ -24,7 +24,7 @@ $(".navbar-toggler").click(function() {
 
     if (clicked % 2 == 0) {
         $('.navbar').css({
-            'background': 'transparent',
+            'background': 'rgba(245,245,220,0.6)'
         });
     } else {
         $('.navbar').css({
