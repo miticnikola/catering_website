@@ -49,7 +49,7 @@ header {
         padding: 0;
         border-bottom: 3px solid rgba(130, 90, 44, 0.3);
         font-size: 20px;
-        background-color: rgba(245,245,220,0.6);
+        background-color: rgba(245, 245, 220, 0.6);
 
         .navbar-brand {
             img {
@@ -81,7 +81,7 @@ header {
                 }
 
                 li {
-                    
+
 
                     a {
                         font-size: 1.3em;
@@ -106,35 +106,38 @@ header {
 
     //NAVIGATION EnD
 
-//GALLERY
+    //GALLERY
 
-.row {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    padding-top: 200px;
-    padding-bottom: 80px;
-
-    background-color: #fef8ef;
-    .col-xl-2 {
-        margin: 0;
+    .row {
+        width: 100%;
+        margin: 0 auto;
         padding: 0;
+        padding-top: 200px;
+        padding-bottom: 80px;
 
-        a {
-            width: 100%;
-                margin: 0;
-                padding: 0;
-            img {
+        background-color: #fef8ef;
+
+        .col-xl-2 {
+            margin: 0;
+            padding: 0;
+
+            a {
                 width: 100%;
                 margin: 0;
                 padding: 0;
+
+                img {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
             }
         }
+
+
     }
 
-
-}
-//GALLERY END
+    //GALLERY END
 
     //HEADER END
 }
@@ -216,8 +219,9 @@ header {
                 // Z A S T O     N E C E   O D M A H    D A  S E   P R O M E N I  B O J A     S L O V A   K A D   S E   K L I K N E
                 ul {
                     li {
-                    width: 100%;
-                    text-align: center;
+                        width: 100%;
+                        text-align: center;
+
                         a {
                             font-size: 1.3em;
                             color: rgb(42, 28, 14);
@@ -236,9 +240,10 @@ header {
                                 text-shadow: 2px 2px 3px white;
 
                             }
-                                &:not(:last-child) {
-                                    margin-right: default;
-                                }
+
+                            &:not(:last-child) {
+                                margin-right: default;
+                            }
 
                         }
                     }
@@ -253,59 +258,33 @@ header {
 
 @media screen and (max-width: 575px) {
 
-//HEADER
-header {
-//NAVIGATION
-    nav {
-        .navbar-brand {
-            img {
-                width: 40%;
-            }
-        }
+    //HEADER
+    header {
 
-        .navbar-toggler {
-            border: 1px solid rgb(130, 90, 44);
-            margin-left: -270px;
-
-            &:focus {
-                outline: none;
+        //NAVIGATION
+        nav {
+            .navbar-brand {
+                img {
+                    width: 40%;
+                }
             }
 
-            .navbar-toggler-icon {
-                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(130,90,44, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-
+            .navbar-toggler {
+                margin-left: -270px;
             }
 
-        }
-
-        .collapse {
-            width: 100%;
-
-            ul {
-                li {
-                    a {
-                        font-size: 1.1em;
-                        letter-spacing: 1px;
-                        @include transition();
-
-
-                        &:hover {
-                            @include transition();
-                            color: rgb(249, 244, 238);
-                            text-shadow: 2px 2px 3px rgb(42, 28, 14);
+            .collapse {
+                ul {
+                    li {
+                        a {
+                            font-size: 1.1em;
+                            letter-spacing: 1px;
                         }
-
                     }
                 }
             }
         }
-    }
 
-    //NAVIGATION EnD
+        //NAVIGATION EnD
     }
 }
-
-
-
-
-

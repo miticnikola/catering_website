@@ -123,27 +123,33 @@ header {
     header .logo1 img {
       width: 65%; } }
 @media screen and (max-width: 1199px) {
-  header nav .collapse ul li a {
-    font-size: 1.3em;
-    color: green;
-    text-shadow: 2px 2px 3px white;
-    font-style: italic;
-    font-weight: 550;
-    -webkit-transition: none;
-    -moz-transition: none;
-    -o-transition: none;
-    -ms-transition: none;
-    transition: none; }
-    header nav .collapse ul li a:hover {
+  header nav .collapse ul li {
+    width: 100%;
+    text-align: center; }
+    header nav .collapse ul li a {
+      font-size: 1.3em;
+      color: green;
+      text-shadow: 2px 2px 3px white;
+      border-bottom: 1px solid rgba(130, 90, 44, 0.3);
+      text-shadow: 2px 2px 3px white;
+      font-style: normal;
+      width: 80%;
+      font-weight: 550;
       -webkit-transition: none;
       -moz-transition: none;
       -o-transition: none;
       -ms-transition: none;
-      transition: none;
-      color: #2a1c0e;
-      text-shadow: 2px 2px 3px white; }
-      header nav .collapse ul li a:hover li:not(:last-child) {
-        margin-right: 0px; } }
+      transition: none; }
+      header nav .collapse ul li a:hover {
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        -ms-transition: none;
+        transition: none;
+        color: #2a1c0e;
+        text-shadow: 2px 2px 3px white; }
+      header nav .collapse ul li a:not(:last-child) {
+        margin-right: default; } }
 @media screen and (max-width: 1450px) {
   header nav .collapse ul li:not(:last-child) {
     margin-right: 50px; }

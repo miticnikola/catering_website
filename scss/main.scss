@@ -44,7 +44,7 @@ header {
     @include coverImg();
     height: 700px;
 
-//NAVIGATION
+    //NAVIGATION
     nav {
         width: 100%;
         margin: 0;
@@ -60,9 +60,11 @@ header {
 
         .navbar-toggler {
             border: 1px solid rgb(130, 90, 44);
-			&:focus {
-				outline: none;
-			}
+
+            &:focus {
+                outline: none;
+            }
+
             .navbar-toggler-icon {
                 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(130,90,44, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 
@@ -72,41 +74,44 @@ header {
 
         .collapse {
             width: 100%;
+
             ul {
-            	li:not(:last-child) {
-					margin-right: 120px;
-            		}
-            		li{
+                li:not(:last-child) {
+                    margin-right: 120px;
+                }
 
-            		a {
-            			font-size: 1.3em;
-            			color: rgb(42, 28, 14);
-            			text-shadow: 2px 2px 3px white;
-            			font-style: italic;
-            			font-weight: 550;
-            			letter-spacing: 1px;
-	                    @include transition();
+                li {
 
-            			&:hover {
-		                    @include transition();
-                    		color: rgb(249, 244, 238);
-            				text-shadow: 2px 2px 3px rgb(42, 28, 14);
-            			}
+                    a {
+                        font-size: 1.3em;
+                        color: rgb(42, 28, 14);
+                        text-shadow: 2px 2px 3px white;
+                        font-style: italic;
+                        font-weight: 550;
+                        letter-spacing: 1px;
+                        @include transition();
 
-            		}
-            	}
+                        &:hover {
+                            @include transition();
+                            color: rgb(249, 244, 238);
+                            text-shadow: 2px 2px 3px rgb(42, 28, 14);
+                        }
+
+                    }
+                }
             }
         }
     }
-//NAVIGATION EnD
+
+    //NAVIGATION EnD
 
 
-//HEADER CENTER IMAGE
+    //HEADER CENTER IMAGE
     .logo1 {
         width: 100%;
         margin: 0 auto;
         @include middleTextPos();
-    	padding-top: 100px;
+        padding-top: 100px;
 
 
         img {
@@ -115,6 +120,7 @@ header {
         }
     }
 }
+
 //HEADER CENTER IMAGE
 
 
@@ -185,7 +191,7 @@ header {
                     text-transform: uppercase;
                     letter-spacing: 2px;
 
-	                    @include transition();
+                    @include transition();
 
 
 
@@ -203,7 +209,7 @@ header {
                 transition: visibility 0s, opacity 0.5s ease-in-out;
                 font-style: italic;
                 margin-top: -15px;
-                                	                    @include transition();
+                @include transition();
 
 
 
@@ -351,23 +357,81 @@ header {
 
 
 //MEDIA QUERIES
+@media screen and (max-width: 1450px) {
+    header {
+        nav {
+            .collapse {
+                ul {
+                    li:not(:last-child) {
+                        margin-right: 50px;
+                    }
 
-@media screen and (max-width: 575px) {
+                    li {
+                        a {
+                            letter-spacing: 0px;
+                            font-size: 1.3em;
 
-    //SECTION 1
-    .section1 {
-        .sec1 {
-            div {
-                .fluid {
-                    p {
 
-                        margin-top: -15px;
+                        }
                     }
                 }
             }
         }
     }
 }
+
+
+
+@media screen and (max-width: 1199px) {
+    header {
+
+        //NAVIGATION
+        nav {
+            .collapse {
+
+
+                // Z A S T O     N E C E   O D M A H    D A  S E   P R O M E N I  B O J A     S L O V A   K A D   S E   K L I K N E
+                ul {
+                    li {
+                        width: 100%;
+                        text-align: center;
+
+                        a {
+                            font-size: 1.3em;
+                            color: rgb(42, 28, 14);
+                            border-bottom: 1px solid rgba(130, 90, 44, 0.3);
+                            text-shadow: 2px 2px 3px white;
+                            font-style: normal;
+                            font-weight: 550;
+                            width: 80%;
+                            margin: 0 auto;
+                            @include UnTransition();
+
+                            &:hover {
+                                @include UnTransition();
+
+                                color: rgb(42, 28, 14);
+                                text-shadow: 2px 2px 3px white;
+
+                            }
+
+                            &:not(:last-child) {
+                                margin-right: default;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    //NAVIGATION EnD
+
+
+}
+
 
 @media screen and (max-width: 767px) {
 
@@ -435,66 +499,49 @@ header {
     }
 }
 
-@media screen and (max-width: 1199px) {
-	header {
-//NAVIGATION
-    nav {
-        .collapse {
+@media screen and (max-width: 575px) {
 
+    //HEADER
+    header {
 
-        	// Z A S T O     N E C E   O D M A H    D A  S E   P R O M E N I  B O J A     S L O V A   K A D   S E   K L I K N E
-            ul {
-            		li{
+        //NAVIGATION
+        nav {
+            .navbar-brand {
+                img {
+                    width: 40%;
+                }
+            }
 
-            		a {
-            			font-size: 1.3em;
-            			color: green;
-            			text-shadow: 2px 2px 3px white;
-            			font-style: italic;
-            			font-weight: 550;
-	                   @include UnTransition();
+            .navbar-toggler {
+                margin-left: -270px;
+            }
 
-            			&:hover {
-		                    	                   @include UnTransition();
+            .collapse {
+                ul {
+                    li {
+                        a {
+                            font-size: 1.1em;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+        }
 
-            				color: rgb(42, 28, 14);
-            				text-shadow: 2px 2px 3px white;
-            	li:not(:last-child) {
-					margin-right: 0px;
-            		}
-            			}
+        //NAVIGATION EnD
+    }
 
-            		}
-            	}
+    //SECTION 1
+    .section1 {
+        .sec1 {
+            div {
+                .fluid {
+                    p {
+
+                        margin-top: -15px;
+                    }
+                }
             }
         }
     }
-
-}
-//NAVIGATION EnD
-
-
-}
-
-
-@media screen and (max-width: 1450px) {
-	header {
-	nav {
-		.collapse {
-			ul {
-				li:not(:last-child) {
-					margin-right: 50px;
-            		}
-				li {
-					a {
-						letter-spacing: 0px;
-            			font-size: 1.3em;
-
-
-					}
-				}
-			}
-		}
-	}
-}
 }

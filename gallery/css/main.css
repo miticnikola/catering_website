@@ -108,23 +108,9 @@ header {
   header nav .navbar-brand img {
     width: 40%; }
   header nav .navbar-toggler {
-    border: 1px solid #825a2c;
     margin-left: -270px; }
-    header nav .navbar-toggler:focus {
-      outline: none; }
-    header nav .navbar-toggler .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(130,90,44, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
-  header nav .collapse {
-    width: 100%; }
-    header nav .collapse ul li a {
-      font-size: 1.1em;
-      letter-spacing: 1px;
-      -webkit-transition: all 0.5s ease;
-      transition: all 0.5s ease; }
-      header nav .collapse ul li a:hover {
-        -webkit-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-        color: #f9f4ee;
-        text-shadow: 2px 2px 3px #2a1c0e; } }
+  header nav .collapse ul li a {
+    font-size: 1.1em;
+    letter-spacing: 1px; } }
 
 /*# sourceMappingURL=main.css.map */

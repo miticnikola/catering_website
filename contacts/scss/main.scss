@@ -80,7 +80,7 @@ header {
                 }
 
                 li {
-                    
+
 
                     a {
                         font-size: 1.3em;
@@ -108,66 +108,73 @@ header {
     #contact {
         width: 100%;
         margin-top: 100px;
-      //  background-color: green;
+        //  background-color: green;
         @include middleTextPos();
-            color: rgb(42, 28, 14);
-                font-family: 'Cuprum', sans-serif;
+        color: rgb(42, 28, 14);
+        font-family: 'Cuprum', sans-serif;
 
 
 
         .contact-section {
-        //    background-color: red;
+            //    background-color: red;
             margin: 0 auto;
+
             h1 {
                 letter-spacing: 3px;
                 font-size: 4em;
             }
-.row {
-.form-group {
-    margin-top: 10px;
-label {
-    font-size: 1.3em;
-    line-height: 1em;
-    font-weight: bold;
-}
-.form-control {
-    font-size: 1em;
-    color: #080808;
-    font-style: italic;
-    &:focus {
-         outline: none !important;
-    border:1px solid beige;
-    box-shadow: 0 0 10px rgba(42, 28, 14, 0.3);
-    }
-}
-#message {
-    height: 125px;
-}
-}
- button {
-    margin: 0;
-    padding: 5px 0;
-    @include transition();
-    color: beige;
-    background-color: rgb(42, 28, 14);
-    border: 1px solid beige;
-    font-size: 1em;
-    border-radius: 5px;
-    font-family: 'Cuprum', sans-serif;
-    letter-spacing: 3px;
-    font-weight: bold;
-    &:hover {
-            @include transition();
 
-        background-color: beige;
-        color: rgb(42, 28, 14);
-        border: 1px solid rgb(42, 28, 14);
-        font-weight: bold;
+            .row {
+                .form-group {
+                    margin-top: 10px;
+
+                    label {
+                        font-size: 1.3em;
+                        line-height: 1em;
+                        font-weight: bold;
+                    }
+
+                    .form-control {
+                        font-size: 1em;
+                        color: #080808;
+                        font-style: italic;
+
+                        &:focus {
+                            outline: none !important;
+                            border: 1px solid beige;
+                            box-shadow: 0 0 10px rgba(42, 28, 14, 0.3);
+                        }
+                    }
+
+                    #message {
+                        height: 125px;
+                    }
+                }
+
+                button {
+                    margin: 0;
+                    padding: 5px 0;
+                    @include transition();
+                    color: beige;
+                    background-color: rgb(42, 28, 14);
+                    border: 1px solid beige;
+                    font-size: 1em;
+                    border-radius: 5px;
+                    font-family: 'Cuprum', sans-serif;
+                    letter-spacing: 3px;
+                    font-weight: bold;
+
+                    &:hover {
+                        @include transition();
+                        background-color: beige;
+                        color: rgb(42, 28, 14);
+                        border: 1px solid rgb(42, 28, 14);
+                        font-weight: bold;
 
 
-    };
-}
-}
+                    }
+                }
+            }
 
 
 
@@ -218,70 +225,6 @@ label {
 
 
 //MEDIA QUERIES
-
-@media screen and (max-width: 767px) {
-
-
-    //HEADER
-    header {
-        .logo1 {
-            width: 100%;
-
-
-            img {
-                width: 65%;
-            }
-        }
-    }
-}
-
-
-@media screen and (max-width: 1199px) {
-    header {
-
-        //NAVIGATION
-        nav {
-
-            .collapse {
-
-
-                // Z A S T O     N E C E   O D M A H    D A  S E   P R O M E N I  B O J A     S L O V A   K A D   S E   K L I K N E
-                ul {
-                    li {
-
-                        a {
-                            font-size: 1.3em;
-                            color: green;
-                            text-shadow: 2px 2px 3px white;
-                            font-style: italic;
-                            font-weight: 550;
-                            @include UnTransition();
-
-                            &:hover {
-                                @include UnTransition();
-
-                                color: rgb(42, 28, 14);
-                                text-shadow: 2px 2px 3px white;
-
-                                li:not(:last-child) {
-                                    margin-right: 0px;
-                                }
-                            }
-
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-
-    //NAVIGATION EnD
-
-
-}
-
-
 @media screen and (max-width: 1450px) {
     header {
         nav {
@@ -303,4 +246,118 @@ label {
             }
         }
     }
+}
+
+
+
+@media screen and (max-width: 1199px) {
+    header {
+
+        //NAVIGATION
+        nav {
+
+            .collapse {
+
+
+                // Z A S T O     N E C E   O D M A H    D A  S E   P R O M E N I  B O J A     S L O V A   K A D   S E   K L I K N E
+                ul {
+                    li {
+                        width: 100%;
+                        text-align: center;
+
+                        a {
+                            font-size: 1.3em;
+                            color: rgb(42, 28, 14);
+                            text-shadow: 2px 2px 3px white;
+                            border-bottom: 1px solid rgba(130, 90, 44, 0.3);
+                            text-shadow: 2px 2px 3px white;
+                            font-style: normal;
+                            width: 80%;
+                            font-weight: 550;
+                            margin: 0 auto;
+                            @include UnTransition();
+
+                            &:hover {
+                                @include UnTransition();
+
+                                color: rgb(42, 28, 14);
+                                text-shadow: 2px 2px 3px white;
+                            }
+
+                            &:not(:last-child) {
+                                margin-right: default;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    //NAVIGATION EnD
+
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+
+    //HEADER
+    header {
+        .logo1 {
+            width: 100%;
+
+
+            img {
+                width: 65%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+
+    //HEADER
+    header {
+
+        //NAVIGATION
+        nav {
+            .navbar-brand {
+                img {
+                    width: 40%;
+                }
+            }
+
+            .navbar-toggler {
+                margin-left: -270px;
+            }
+
+            .collapse {
+                ul {
+                    li {
+                        a {
+                            font-size: 1.1em;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+        }
+
+        //NAVIGATION EnD
+
+     #contact {
+        .contact-section {
+            h1 {
+                font-size: 3em;
+            }
+}
+}
+}
+
 }
